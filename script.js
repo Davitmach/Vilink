@@ -105,3 +105,218 @@ Row3_btn.addEventListener('click',()=> {
         Row4_menu.classList.remove('Active')
     }
    })
+
+
+   // Slider 
+const Left = document.getElementById('Left');
+const Right = document.getElementById('Right');
+const Slide = document.getElementById('Slide');
+
+
+var slideWidth = 150; 
+var slideMargin = 78; 
+const visibleSlidesCount = 3; 
+if(window.innerWidth <1415) {
+    slideWidth = 100
+}
+
+if(window.innerWidth <772) {
+    slideMargin = 50;
+    slideWidth = 80;
+}
+if(window.innerWidth < 598) {
+    slideWidth = 60
+}
+if(window.innerWidth <= 527) {
+    slideWidth = 40
+}
+let Transform = 0;
+window.addEventListener('resize',()=> {
+    Slide.style.transform = 'translateX(0)'
+    Transform= 0 ;
+    if(window.innerWidth <1415) {
+        slideWidth = 100
+    }
+  
+    if(window.innerWidth <772) {
+        slideMargin = 50;
+        slideWidth = 80;
+    }
+    if(window.innerWidth < 598) {
+        slideWidth = 60
+    }
+    if(window.innerWidth <= 527) {
+        slideWidth = 40
+    }
+})
+
+Right.addEventListener('click', () => {
+  const maxTransform = (Slide.childElementCount - visibleSlidesCount) * (slideWidth + slideMargin);
+  
+  if (Transform < maxTransform) {
+    Transform += (slideWidth + slideMargin);
+    
+
+    if (Transform > maxTransform) {
+      Transform = maxTransform;
+    }
+    
+    Slide.style.transform = `translateX(-${Transform}px)`;
+  }
+});
+
+Left.addEventListener('click', () => {
+  if (Transform > 0) {
+    Transform -= (slideWidth + slideMargin);
+    
+ 
+    if (Transform < 0) {
+      Transform = 0;
+    }
+    
+    Slide.style.transform = `translateX(-${Transform}px)`;
+  }
+});
+
+
+// slide2
+
+const Left2 = document.getElementById('Left2');
+const Right2 = document.getElementById('Right2');
+const Slide2 = document.getElementById('Slide2');
+
+
+var slideWidth = 150; 
+var slideMargin = 78; 
+
+if(window.innerWidth <1415) {
+    slideWidth = 100
+}
+
+if(window.innerWidth <772) {
+    slideMargin = 50;
+    slideWidth = 80;
+}
+if(window.innerWidth < 598) {
+    slideWidth = 60
+}
+if(window.innerWidth <= 527) {
+    slideWidth = 40
+}
+let Transform2 = 0;
+window.addEventListener('resize',()=> {
+    Slide2.style.transform = 'translateX(0)'
+    Transform2= 0 ;
+    if(window.innerWidth <1415) {
+        slideWidth = 100
+    }
+  
+    if(window.innerWidth <772) {
+        slideMargin = 50;
+        slideWidth = 80;
+    }
+    if(window.innerWidth < 598) {
+        slideWidth = 60
+    }
+    if(window.innerWidth <=527) {
+        slideWidth = 40
+    }
+})
+
+Right2.addEventListener('click', () => {
+  const maxTransform = (Slide2.childElementCount - visibleSlidesCount) * (slideWidth + slideMargin);
+  
+  if (Transform2 < maxTransform) {
+    Transform2 += (slideWidth + slideMargin);
+    
+
+    if (Transform2 > maxTransform) {
+      Transform2 = maxTransform;
+    }
+    
+    Slide2.style.transform = `translateX(-${Transform2}px)`;
+  }
+});
+
+Left2.addEventListener('click', () => {
+  if (Transform2 > 0) {
+    Transform2 -= (slideWidth + slideMargin);
+    
+ 
+    if (Transform2 < 0) {
+      Transform2 = 0;
+    }
+    
+    Slide2.style.transform = `translateX(-${Transform2}px)`;
+  }
+});
+
+
+// like 
+
+document.querySelectorAll('.Like_btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const icon = button.querySelector('i');
+
+        // Проверяем, заполнено ли сердечко
+        if (icon.classList.contains('fa-regular')) {
+            // Меняем иконку на заполненное сердечко
+            icon.classList.remove('fa-regular');
+            icon.classList.add('fa-solid');
+        } else {
+            // Меняем иконку на обычное сердечко
+            icon.classList.remove('fa-solid');
+            icon.classList.add('fa-regular');
+        }
+    });
+});
+
+
+// btn 
+const Original = document.querySelector('.Original') ;
+const Brand = document.querySelector('.Brand')
+Original.classList.add('Active')
+Brand.classList.add('Disable')
+
+
+Original.addEventListener('click',()=> {
+    if(Brand.classList.contains('Active')) {
+        Brand.classList.remove('Active')
+        Brand.classList.add('Disable');
+        Original.classList.add('Active');
+        Original.classList.remove('Disable')
+    }
+})
+Brand.addEventListener('click',()=> {
+    if(Original.classList.contains('Active')) {
+        Brand.classList.add('Active')
+        Brand.classList.remove('Disable');
+        Original.classList.remove('Active');
+        Original.classList.add('Disable')
+    }
+})
+
+// btn2
+const Original2 = document.querySelector('.Original2') ;
+const Brand2 = document.querySelector('.Brand2')
+Original2.classList.add('Active')
+Brand2.classList.add('Disable')
+
+
+Original2.addEventListener('click',()=> {
+    if(Brand2.classList.contains('Active')) {
+        Brand2.classList.remove('Active')
+        Brand2.classList.add('Disable');
+        Original2.classList.add('Active');
+        Original2.classList.remove('Disable')
+    }
+})
+Brand2.addEventListener('click',()=> {
+    if(Original2.classList.contains('Active')) {
+        Brand2.classList.add('Active')
+        Brand2.classList.remove('Disable');
+        Original2.classList.remove('Active');
+        Original2.classList.add('Disable')
+    }
+})
+

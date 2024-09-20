@@ -609,12 +609,21 @@ header {
         border: none;
         font-size: 10px;
         font-weight: 400;
+        cursor: pointer;
       }
-      .Brand {
+      // .Brand {
+      //   background-color: #d9d9d9;
+      //   color: black;
+      // }
+      // .Original {
+      //   background-color: #d02c2c;
+      //   color: white;
+      // }
+      .Disable {
         background-color: #d9d9d9;
         color: black;
       }
-      .Original {
+      .Active {
         background-color: #d02c2c;
         color: white;
       }
@@ -714,6 +723,10 @@ header {
         .Other_func_box {
           display: flex;
           gap: 18px;
+          cursor: pointer;
+          .Like_btn {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -740,7 +753,7 @@ header {
     padding: 20px 20px;
   }
   @media (min-width: 320px) and (max-width: 395px) {
-    padding: 0 20px;
+    padding: 20px 20px;
   }
   .Left_arrow,
   .Right_arrow {
@@ -759,37 +772,74 @@ header {
         width: 10px;
       }
     }
+  
   }
+  .Slide {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+   
+    gap: 78px;
+    width: 900px;
+    overflow: hidden;
+    
+    @media (min-width: 320px) and (max-width: 1415px) {
+    width: 639px;
+    }
+    @media (min-width: 320px) and (max-width: 772px) {
+     width: 477px;
+    }
+    @media (min-width: 320px) and (max-width: 598px) {
+   width:390px;
+    }
+    @media (min-width: 320px) and (max-width: 527px) {
+      width: 220px;
+    }
   .Brands {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
+transition: .4s;
     gap: 78px;
-    @media (min-width: 320px) and (max-width: 881px) {
-      gap: 40px;
-    }
+ 
+   
     @media (min-width: 320px) and (max-width: 531px) {
       gap: 20px;
     }
+    @media (min-width: 320px) and (max-width: 772px) {
+ gap: 50px;
+    }
     & > div svg {
+      width: 150px;
+      height: 150px;
       @media (min-width: 320px) and (max-width: 1415px) {
         width: 100px;
+        height: 100px;
       }
       @media (min-width: 320px) and (max-width: 1045px) {
-        width: 70px;
+        width: 100px;
+        height: 100px;
       }
-      @media (min-width: 320px) and (max-width: 664px) {
-        width: 50px;
+      @media (min-width: 320px) and (max-width: 818px) {
+        width: 100px;
+        height: 100px;
       }
-      @media (min-width: 320px) and (max-width: 451px) {
+      @media (min-width: 320px) and (max-width: 772px) {
+        width: 80px;
+        height: 80px;
+      }
+      @media (min-width: 320px) and (max-width: 598px) {
+        width: 60px;
+        height: 60px;
+      }
+      @media (min-width: 320px) and (max-width: 527px) {
         width: 40px;
-      }
-      @media (min-width: 320px) and (max-width: 395px) {
-        width: 30px;
+        height: 40px;
       }
     }
-  }
+  }}
 }
 
 .Info_box_podbor {

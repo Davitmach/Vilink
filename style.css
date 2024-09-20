@@ -718,12 +718,13 @@ header .Menu_box .Low_res_btn .Menu_btn {
   border: none;
   font-size: 10px;
   font-weight: 400;
+  cursor: pointer;
 }
-.Engine_oil .Title_box .Btn_box .Brand {
+.Engine_oil .Title_box .Btn_box .Disable {
   background-color: #d9d9d9;
   color: black;
 }
-.Engine_oil .Title_box .Btn_box .Original {
+.Engine_oil .Title_box .Btn_box .Active {
   background-color: #d02c2c;
   color: white;
 }
@@ -826,6 +827,10 @@ header .Menu_box .Low_res_btn .Menu_btn {
 .Engine_oil .Oils_box > div .Btn_box .Other_func_box {
   display: flex;
   gap: 18px;
+  cursor: pointer;
+}
+.Engine_oil .Oils_box > div .Btn_box .Other_func_box .Like_btn {
+  font-size: 20px;
 }
 
 .Car_brands {
@@ -859,7 +864,7 @@ header .Menu_box .Low_res_btn .Menu_btn {
 }
 @media (min-width: 320px) and (max-width: 395px) {
   .Car_brands {
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 }
 .Car_brands .Left_arrow,
@@ -884,46 +889,90 @@ header .Menu_box .Low_res_btn .Menu_btn {
     width: 10px;
   }
 }
-.Car_brands .Brands {
+.Car_brands .Slide {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
   gap: 78px;
+  width: 900px;
+  overflow: hidden;
 }
-@media (min-width: 320px) and (max-width: 881px) {
-  .Car_brands .Brands {
-    gap: 40px;
+@media (min-width: 320px) and (max-width: 1415px) {
+  .Car_brands .Slide {
+    width: 639px;
   }
 }
+@media (min-width: 320px) and (max-width: 772px) {
+  .Car_brands .Slide {
+    width: 477px;
+  }
+}
+@media (min-width: 320px) and (max-width: 598px) {
+  .Car_brands .Slide {
+    width: 390px;
+  }
+}
+@media (min-width: 320px) and (max-width: 527px) {
+  .Car_brands .Slide {
+    width: 220px;
+  }
+}
+.Car_brands .Slide .Brands {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  transition: 0.4s;
+  gap: 78px;
+}
 @media (min-width: 320px) and (max-width: 531px) {
-  .Car_brands .Brands {
+  .Car_brands .Slide .Brands {
     gap: 20px;
   }
 }
+@media (min-width: 320px) and (max-width: 772px) {
+  .Car_brands .Slide .Brands {
+    gap: 50px;
+  }
+}
+.Car_brands .Slide .Brands > div svg {
+  width: 150px;
+  height: 150px;
+}
 @media (min-width: 320px) and (max-width: 1415px) {
-  .Car_brands .Brands > div svg {
+  .Car_brands .Slide .Brands > div svg {
     width: 100px;
+    height: 100px;
   }
 }
 @media (min-width: 320px) and (max-width: 1045px) {
-  .Car_brands .Brands > div svg {
-    width: 70px;
+  .Car_brands .Slide .Brands > div svg {
+    width: 100px;
+    height: 100px;
   }
 }
-@media (min-width: 320px) and (max-width: 664px) {
-  .Car_brands .Brands > div svg {
-    width: 50px;
+@media (min-width: 320px) and (max-width: 818px) {
+  .Car_brands .Slide .Brands > div svg {
+    width: 100px;
+    height: 100px;
   }
 }
-@media (min-width: 320px) and (max-width: 451px) {
-  .Car_brands .Brands > div svg {
+@media (min-width: 320px) and (max-width: 772px) {
+  .Car_brands .Slide .Brands > div svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 320px) and (max-width: 598px) {
+  .Car_brands .Slide .Brands > div svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (min-width: 320px) and (max-width: 527px) {
+  .Car_brands .Slide .Brands > div svg {
     width: 40px;
-  }
-}
-@media (min-width: 320px) and (max-width: 395px) {
-  .Car_brands .Brands > div svg {
-    width: 30px;
+    height: 40px;
   }
 }
 
