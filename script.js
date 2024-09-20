@@ -252,27 +252,7 @@ Left2.addEventListener('click', () => {
 });
 
 
-// like 
 
-document.querySelectorAll('.Like_btn').forEach(button => {
-    button.classList.add('Disable')
-    button.addEventListener('click', (e) => {
-        const icon = button.querySelector('i');
-
-        // Проверяем, заполнено ли сердечко
-        if (button.classList.contains('Disable')) {
-            // Меняем иконку на заполненное сердечко
-            icon.style.color = '#d02c2c'
-            button.classList.remove('Disable')
-            button.classList.add('Active')
-          
-        } else {
-           icon.style.color = 'black'
-           button.classList.add('Disable')
-           button.classList.remove('Active')
-        }
-    });
-});
 
 
 
@@ -447,3 +427,27 @@ Brand2.addEventListener('click',()=> {
         RenderProduct2(Data1)
     }
 })
+
+// like 
+
+document.querySelectorAll('.Like_btn').forEach(button => {
+    button.classList.add('Disable')
+    button.addEventListener('click', (e) => {
+      
+        
+        const icon = button.querySelector('i');
+
+        // Проверяем, заполнено ли сердечко
+        if (button.classList.contains('Disable')) {
+            // Меняем иконку на заполненное сердечко
+            icon.style.color = '#d02c2c'
+            button.classList.remove('Disable')
+            button.classList.add('Active')
+          
+        } else {
+           icon.style.color = 'black'
+           button.classList.add('Disable')
+           button.classList.remove('Active')
+        }
+    });
+});
