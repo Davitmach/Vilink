@@ -310,7 +310,7 @@ function RenderProduct(data) {
       <div class="Like_btn">
         <i class="fa-regular fa-heart"></i> <!-- Обычное сердечко -->
     </div>
-        <div><svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div><svg id="List" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.875122" y="0.777588" width="20" height="2" rx="1" fill="#151515"/>
 <rect x="0.875122" y="15.7776" width="20" height="2" rx="1" fill="#151515"/>
 <rect x="17.8751" y="13.7776" width="8" height="2" rx="1" transform="rotate(-90 17.8751 13.7776)" fill="#151515"/>
@@ -349,7 +349,7 @@ function RenderProduct2(data) {
       <div class="Like_btn">
         <i class="fa-regular fa-heart"></i> <!-- Обычное сердечко -->
     </div>
-        <div><svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div><svg id="List" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.875122" y="0.777588" width="20" height="2" rx="1" fill="#151515"/>
 <rect x="0.875122" y="15.7776" width="20" height="2" rx="1" fill="#151515"/>
 <rect x="17.8751" y="13.7776" width="8" height="2" rx="1" transform="rotate(-90 17.8751 13.7776)" fill="#151515"/>
@@ -451,3 +451,21 @@ document.querySelectorAll('.Like_btn').forEach(button => {
         }
     });
 });
+
+
+// list 
+const List_btn = document.querySelectorAll('#List');
+
+for (let i = 0; i < List_btn.length; i++) {  // Use 'let' instead of 'var'
+    List_btn[i].classList.add('Disable');
+
+    List_btn[i].addEventListener('click', () => {
+        if (List_btn[i].classList.contains('Disable')) {
+            List_btn[i].classList.add('Active');
+            List_btn[i].classList.remove('Disable');
+        } else {
+            List_btn[i].classList.remove('Active');
+            List_btn[i].classList.add('Disable');
+        }
+    });
+}

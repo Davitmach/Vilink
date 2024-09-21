@@ -508,7 +508,6 @@ header .Menu_box .Low_res_btn .Menu_btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
 }
 .Catalog_box .Brands > div a {
   text-decoration: none;
@@ -516,7 +515,9 @@ header .Menu_box .Low_res_btn .Menu_btn {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
   color: black;
+  padding: 0 30px;
 }
 @media (min-width: 320px) and (max-width: 517px) {
   .Catalog_box .Brands > div a {
@@ -844,6 +845,9 @@ header .Menu_box .Low_res_btn .Menu_btn {
 }
 .Engine_oil .Oils_box > div .Btn_box .Other_func_box .Like_btn, .Engine_oil .Oils_box2 > div .Btn_box .Other_func_box .Like_btn {
   font-size: 20px;
+}
+.Engine_oil .Oils_box > div .Btn_box .Other_func_box .Active > rect, .Engine_oil .Oils_box2 > div .Btn_box .Other_func_box .Active > rect {
+  fill: #d02c2c;
 }
 
 .Car_brands {
