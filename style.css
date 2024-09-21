@@ -843,7 +843,7 @@ header .Menu_box .Low_res_btn .Menu_btn {
   gap: 18px;
   cursor: pointer;
 }
-.Engine_oil .Oils_box > div .Btn_box .Other_func_box .Like_btn, .Engine_oil .Oils_box2 > div .Btn_box .Other_func_box .Like_btn {
+.Engine_oil .Oils_box > div .Btn_box .Other_func_box .Like_btn, .Engine_oil .Oils_box > div .Btn_box .Other_func_box .Like_btn2, .Engine_oil .Oils_box2 > div .Btn_box .Other_func_box .Like_btn, .Engine_oil .Oils_box2 > div .Btn_box .Other_func_box .Like_btn2 {
   font-size: 20px;
 }
 .Engine_oil .Oils_box > div .Btn_box .Other_func_box .Active > rect, .Engine_oil .Oils_box2 > div .Btn_box .Other_func_box .Active > rect {

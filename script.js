@@ -346,10 +346,10 @@ function RenderProduct2(data) {
 <div class="Btn_box">
 <div class="Cart_btn"><button>В корзину</button></div>
     <div class="Other_func_box">
-      <div class="Like_btn">
+      <div class="Like_btn2">
         <i class="fa-regular fa-heart"></i> <!-- Обычное сердечко -->
     </div>
-        <div><svg id="List" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div><svg id="List2" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.875122" y="0.777588" width="20" height="2" rx="1" fill="#151515"/>
 <rect x="0.875122" y="15.7776" width="20" height="2" rx="1" fill="#151515"/>
 <rect x="17.8751" y="13.7776" width="8" height="2" rx="1" transform="rotate(-90 17.8751 13.7776)" fill="#151515"/>
@@ -381,6 +381,8 @@ Original.addEventListener('click',()=> {
         Original.classList.add('Active');
         Original.classList.remove('Disable')
         RenderProduct(Data)
+        Like()
+        List()
     }
 })
 Brand.addEventListener('click',()=> {
@@ -393,6 +395,8 @@ Brand.addEventListener('click',()=> {
         console.log(Data1);
         
         RenderProduct(Data1)
+        Like()
+        List()
     }
 })
 
@@ -410,6 +414,8 @@ Original2.addEventListener('click',()=> {
         Original2.classList.add('Active');
         Original2.classList.remove('Disable')
         RenderProduct2(Data)
+        Like2()
+        List2()
    
     }
 })
@@ -425,14 +431,17 @@ Brand2.addEventListener('click',()=> {
         console.log(Data1);
         
         RenderProduct2(Data1)
+        Like2()
+        List2()
     }
 })
 
 // like 
-
+function Like() {
 document.querySelectorAll('.Like_btn').forEach(button => {
     button.classList.add('Disable')
     button.addEventListener('click', (e) => {
+      console.log(1);
       
         
         const icon = button.querySelector('i');
@@ -451,9 +460,35 @@ document.querySelectorAll('.Like_btn').forEach(button => {
         }
     });
 });
-
-
+}
+Like()
+function Like2() {
+    document.querySelectorAll('.Like_btn2').forEach(button => {
+        button.classList.add('Disable')
+        button.addEventListener('click', (e) => {
+          console.log(1);
+          
+            
+            const icon = button.querySelector('i');
+    
+            // Проверяем, заполнено ли сердечко
+            if (button.classList.contains('Disable')) {
+                // Меняем иконку на заполненное сердечко
+                icon.style.color = '#d02c2c'
+                button.classList.remove('Disable')
+                button.classList.add('Active')
+              
+            } else {
+               icon.style.color = 'black'
+               button.classList.add('Disable')
+               button.classList.remove('Active')
+            }
+        });
+    });
+    }
+    Like2()
 // list 
+function List() {
 const List_btn = document.querySelectorAll('#List');
 
 for (let i = 0; i < List_btn.length; i++) { 
@@ -469,3 +504,24 @@ for (let i = 0; i < List_btn.length; i++) {
         }
     });
 }
+}
+List()
+
+function List2() {
+    const List_btn = document.querySelectorAll('#List2');
+    
+    for (let i = 0; i < List_btn.length; i++) { 
+        List_btn[i].classList.add('Disable');
+    
+        List_btn[i].addEventListener('click', () => {
+            if (List_btn[i].classList.contains('Disable')) {
+                List_btn[i].classList.add('Active');
+                List_btn[i].classList.remove('Disable');
+            } else {
+                List_btn[i].classList.remove('Active');
+                List_btn[i].classList.add('Disable');
+            }
+        });
+    }
+    }
+    List2()
