@@ -455,17 +455,19 @@ document.querySelectorAll('.Like_btn').forEach(button => {
 
 // list 
 const List_btn = document.querySelectorAll('#List');
-
-for (let i = 0; i < List_btn.length; i++) {  // Use 'let' instead of 'var'
-    List_btn[i].classList.add('Disable');
-
-    List_btn[i].addEventListener('click', () => {
-        if (List_btn[i].classList.contains('Disable')) {
-            List_btn[i].classList.add('Active');
-            List_btn[i].classList.remove('Disable');
-        } else {
-            List_btn[i].classList.remove('Active');
-            List_btn[i].classList.add('Disable');
-        }
-    });
+for(var List = 0;List < List_btn.length;List++) {
+    List_btn[List].classList.add('Disable')
+    
+        List_btn[List].addEventListener('click',()=> {
+            if(List_btn[List].classList.contains('Disable')) {
+                List_btn[List].classList.add('Active')
+                List_btn[List].classList.remove('Disable')
+            }
+            else {
+                List_btn[List].classList.remove('Active')
+                List_btn[List].classList.add('Disable')
+            }
+        })
+    
+    
 }
