@@ -456,7 +456,7 @@ document.querySelectorAll('.Like_btn').forEach(button => {
 // list 
 const List_btn = document.querySelectorAll('#List');
 
-for (let i = 0; i < List_btn.length; i++) {  // Use 'let' instead of 'var'
+for (let i = 0; i < List_btn.length; i++) { 
     List_btn[i].classList.add('Disable');
 
     List_btn[i].addEventListener('click', () => {

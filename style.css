@@ -1768,6 +1768,9 @@ footer .Footer_box .Row2 {
     padding: 20px 0;
   }
 }
+footer .Footer_box .Row2 .Low_res_btn {
+  cursor: pointer;
+}
 @media (min-width: 1196px) {
   footer .Footer_box .Row2 .Low_res_btn {
     display: none;
@@ -1823,6 +1826,9 @@ footer .Footer_box .Row3 {
     border-top: 1px solid black;
     padding: 20px 0;
   }
+}
+footer .Footer_box .Row3 .Low_res_btn {
+  cursor: pointer;
 }
 @media (min-width: 1196px) {
   footer .Footer_box .Row3 .Low_res_btn {
@@ -1884,6 +1890,14 @@ footer .Footer_box .Row4 {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 20px 0;
+  }
+}
+footer .Footer_box .Row4 .Low_res_btn {
+  cursor: pointer;
+}
+@media (min-width: 1196px) {
+  footer .Footer_box .Row4 .Low_res_btn {
+    display: none;
   }
 }
 footer .Footer_box .Row4 h1 {

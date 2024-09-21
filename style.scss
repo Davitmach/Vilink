@@ -1505,6 +1505,7 @@ footer {
                 
                }
                .Low_res_btn {
+                cursor: pointer;
                 @media (min-width: 1196px)  {
                     display: none;
                    }
@@ -1556,6 +1557,7 @@ footer {
        padding: 20px 0;
             }
             .Low_res_btn {
+              cursor: pointer;
                 @media (min-width: 1196px)  {
                     display: none;
                    }
@@ -1613,6 +1615,11 @@ footer {
             border-bottom: 1px solid black;
             padding: 20px 0;
                 }
+                .Low_res_btn {
+                  cursor: pointer;
+                  @media (min-width: 1196px)  {
+                      display: none;
+                     }}
             h1 {
                 color: black;
                 font-size: 20px;
@@ -1644,6 +1651,7 @@ footer {
                 transition: .4s;
               
             }
+           
             .Disable {
                 height: 0;
                 transition: .4s;
