@@ -114,7 +114,7 @@ header {
       }
     }
     .Active {
-      height: 305px;
+      height: 345px;
       transition: 0.4s;
       overflow: hidden;
     }
@@ -348,6 +348,10 @@ header {
 
       flex: 1 1;
       gap: 16px;
+      @media (min-width:320px) and (max-width:436px) {
+        width: 100%;
+        flex: none;
+      }
       .Info_box {
         display: flex;
         align-items: start;

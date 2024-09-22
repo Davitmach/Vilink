@@ -137,7 +137,7 @@ header .Menu_box .Menu ul li a {
   }
 }
 header .Menu_box .Active {
-  height: 305px;
+  height: 345px;
   transition: 0.4s;
   overflow: hidden;
 }
@@ -424,6 +424,12 @@ header .Menu_box .Low_res_btn .Menu_btn {
   justify-content: center;
   flex: 1 1;
   gap: 16px;
+}
+@media (min-width: 320px) and (max-width: 436px) {
+  .Banner_box .Info_boxes > div {
+    width: 100%;
+    flex: none;
+  }
 }
 .Banner_box .Info_boxes > div .Info_box {
   display: flex;
