@@ -375,7 +375,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+
 .Catalog_box {
   width: 100%;
   height: auto;
@@ -385,9 +385,10 @@ header {
   flex-direction: column;
   padding: 100px 115px;
   gap: 53px;
-  @media (min-width:1903px)  {
-    width:  1880px;
+  @media (min-width:3034px)  {
+    width:  3000px;
   }
+
   @media (min-width: 320px) and (max-width: 1525px) {
     padding: 100px 80px;
   }
@@ -472,6 +473,7 @@ padding: 0 30px;
       }}
     }
   }
+}
 }
 .Categories_box {
   width: 100%;

@@ -453,8 +453,7 @@ header .Menu_box .Low_res_btn .Menu_btn {
   align-items: center;
   justify-content: center;
 }
-
-.Catalog_box {
+.Catalog_cont .Catalog_box {
   width: 100%;
   height: auto;
   display: flex;
@@ -464,47 +463,47 @@ header .Menu_box .Low_res_btn .Menu_btn {
   padding: 100px 115px;
   gap: 53px;
 }
-@media (min-width: 1903px) {
-  .Catalog_box {
-    width: 1880px;
+@media (min-width: 3034px) {
+  .Catalog_cont .Catalog_box {
+    width: 3000px;
   }
 }
 @media (min-width: 320px) and (max-width: 1525px) {
-  .Catalog_box {
+  .Catalog_cont .Catalog_box {
     padding: 100px 80px;
   }
 }
 @media (min-width: 320px) and (max-width: 1459px) {
-  .Catalog_box {
+  .Catalog_cont .Catalog_box {
     padding: 100px 40px;
   }
 }
 @media (min-width: 320px) and (max-width: 1361px) {
-  .Catalog_box {
+  .Catalog_cont .Catalog_box {
     padding: 100px 30px;
   }
 }
 @media (min-width: 320px) and (max-width: 517px) {
-  .Catalog_box {
+  .Catalog_cont .Catalog_box {
     padding: 100px 20px;
   }
 }
 @media (min-width: 320px) and (max-width: 510px) {
-  .Catalog_box {
+  .Catalog_cont .Catalog_box {
     padding: 100px 10px;
   }
 }
-.Catalog_box .Title_box {
+.Catalog_cont .Catalog_box .Title_box {
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
-.Catalog_box .Title_box h1 {
+.Catalog_cont .Catalog_box .Title_box h1 {
   color: #d02c2c;
   font-size: 50px;
   font-weight: 500;
 }
-.Catalog_box .Brands {
+.Catalog_cont .Catalog_box .Brands {
   width: 100%;
   height: auto;
   display: grid;
@@ -512,29 +511,29 @@ header .Menu_box .Low_res_btn .Menu_btn {
   grid-gap: 27px;
 }
 @media (min-width: 320px) and (max-width: 1735px) {
-  .Catalog_box .Brands {
+  .Catalog_cont .Catalog_box .Brands {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media (min-width: 320px) and (max-width: 1283px) {
-  .Catalog_box .Brands {
+  .Catalog_cont .Catalog_box .Brands {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 320px) and (max-width: 1011px) {
-  .Catalog_box .Brands {
+  .Catalog_cont .Catalog_box .Brands {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 320px) and (max-width: 779px) {
-  .Catalog_box .Brands {
+  .Catalog_cont .Catalog_box .Brands {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
   }
 }
-.Catalog_box .Brands > div {
+.Catalog_cont .Catalog_box .Brands > div {
   width: 208px;
   background-color: #eaeaea;
   border-radius: 5px;
@@ -543,7 +542,7 @@ header .Menu_box .Low_res_btn .Menu_btn {
   align-items: center;
   justify-content: space-between;
 }
-.Catalog_box .Brands > div a {
+.Catalog_cont .Catalog_box .Brands > div a {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -554,11 +553,11 @@ header .Menu_box .Low_res_btn .Menu_btn {
   padding: 0 30px;
 }
 @media (min-width: 320px) and (max-width: 517px) {
-  .Catalog_box .Brands > div a {
+  .Catalog_cont .Catalog_box .Brands > div a {
     padding: 0 20px;
   }
 }
-.Catalog_box .Brands > div a h1 {
+.Catalog_cont .Catalog_box .Brands > div a h1 {
   font-size: 15px;
   font-weight: 500;
 }
