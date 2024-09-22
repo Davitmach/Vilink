@@ -403,13 +403,31 @@ header {
   .Brands {
     width: 100%;
     height: auto;
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    // gap: 27px;
+    // @media (min-width:1700px) {
+    //   width: 1700px;
+    // }
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); // 6 столбцов с одинаковой шириной
+    grid-gap: 27px;
+    @media (min-width:320px) and (max-width:1735px) {
+      grid-template-columns: repeat(5, 1fr); 
+    }
+    @media (min-width:320px) and (max-width:1283px) {
+      grid-template-columns: repeat(4, 1fr); 
+    }
+    @media (min-width:320px) and (max-width:1011px) {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+    @media (min-width:320px) and (max-width:779px) {
+      display: flex;
+          align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 27px;
-    @media (min-width:1700px) {
-      width: 1700px;
     }
     & > div {
       width: 208px;
@@ -431,8 +449,8 @@ color: black;
 padding: 0 30px;
       
       @media (min-width: 320px) and (max-width: 517px) {
-        width: 150px;
-        padding: 0 10px;
+     
+        padding: 0 20px;
       }
       h1 {
         font-size: 15px;

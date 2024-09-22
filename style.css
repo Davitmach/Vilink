@@ -489,15 +489,31 @@ header .Menu_box .Low_res_btn .Menu_btn {
 .Catalog_box .Brands {
   width: 100%;
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 27px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 27px;
 }
-@media (min-width: 1700px) {
+@media (min-width: 320px) and (max-width: 1735px) {
   .Catalog_box .Brands {
-    width: 1700px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 320px) and (max-width: 1283px) {
+  .Catalog_box .Brands {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 320px) and (max-width: 1011px) {
+  .Catalog_box .Brands {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 320px) and (max-width: 779px) {
+  .Catalog_box .Brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 .Catalog_box .Brands > div {
@@ -521,8 +537,7 @@ header .Menu_box .Low_res_btn .Menu_btn {
 }
 @media (min-width: 320px) and (max-width: 517px) {
   .Catalog_box .Brands > div a {
-    width: 150px;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 .Catalog_box .Brands > div a h1 {
