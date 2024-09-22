@@ -447,6 +447,13 @@ header .Menu_box .Low_res_btn .Menu_btn {
   font-weight: 500;
 }
 
+.Catalog_cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Catalog_box {
   width: 100%;
   height: auto;
@@ -456,6 +463,11 @@ header .Menu_box .Low_res_btn .Menu_btn {
   flex-direction: column;
   padding: 100px 115px;
   gap: 53px;
+}
+@media (min-width: 1903px) {
+  .Catalog_box {
+    width: 1880px;
+  }
 }
 @media (min-width: 320px) and (max-width: 1525px) {
   .Catalog_box {

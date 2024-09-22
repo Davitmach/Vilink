@@ -370,6 +370,12 @@ header {
     }
   }
 }
+.Catalog_cont {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .Catalog_box {
   width: 100%;
   height: auto;
@@ -379,6 +385,9 @@ header {
   flex-direction: column;
   padding: 100px 115px;
   gap: 53px;
+  @media (min-width:1903px)  {
+    width:  1880px;
+  }
   @media (min-width: 320px) and (max-width: 1525px) {
     padding: 100px 80px;
   }
@@ -406,6 +415,7 @@ header {
   }
   .Brands {
     width: 100%;
+ 
     height: auto;
     // display: flex;
     // align-items: center;
