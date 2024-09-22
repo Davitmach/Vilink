@@ -419,7 +419,10 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
+      @media (min-width: 320px) and (max-width: 517px) {
+        width: 150px;
+        padding: 0 10px;
+      }
       a {
 text-decoration: none;
 display: flex;
@@ -430,10 +433,7 @@ height: 100%;
 color: black;
 padding: 0 30px;
       
-      @media (min-width: 320px) and (max-width: 517px) {
-        width: 150px;
-        padding: 0 10px;
-      }
+     
       h1 {
         font-size: 15px;
         font-weight: 500;
